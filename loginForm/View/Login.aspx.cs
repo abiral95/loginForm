@@ -10,7 +10,7 @@ using System.Text;
 
 namespace loginForm
 {
-    public partial class FirstWebPage : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\aspnet-loginForm-20180607011203.mdf;Initial Catalog=aspnet-loginForm-20180607011203;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
@@ -26,19 +26,25 @@ namespace loginForm
                 string check = "select 1 from Customers where Username = '" + TextUsername.Text + "' and Password = '" + pass + "'";
                 SqlCommand com = new SqlCommand(check, con);
                 con.Open();
-                int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
-
-                if (temp == 1)
+                object value = com.ExecuteScalar();
+                if (value != null)
                 {
+                    int temp = Convert.ToInt32(value.ToString());
 
-                    Response.Redirect("Home.aspx");
-
+                    if (temp == 1)
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
+                    else
+                    {
+                        Label1.Text = "Your Username or Password is Invalid";
+                        Label1.ForeColor = System.Drawing.Color.Red;
+                    }
                 }
                 else
                 {
-
+                    Label1.Text = "Your Username or Password is Invalid";
                     Label1.ForeColor = System.Drawing.Color.Red;
-                    Label1.Text = "Your Email or Password is Invalid";
                 }
             }
             catch (Exception ex)
@@ -48,7 +54,7 @@ namespace loginForm
             {
                 con.Close();
             }
-            
+
         }
 
         static string getMd5Hash(string input)

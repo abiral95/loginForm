@@ -49,6 +49,15 @@ namespace loginForm.View {
         protected global::System.Web.UI.WebControls.TextBox TextUsername;
         
         /// <summary>
+        /// uniqueUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label uniqueUsername;
+        
+        /// <summary>
         /// TxtPassword control.
         /// </summary>
         /// <remarks>
@@ -65,5 +74,14 @@ namespace loginForm.View {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// registrationSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label registrationSuccess;
     }
 }

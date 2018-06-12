@@ -27,15 +27,36 @@ namespace loginForm.View
                 SqlCommand com = new SqlCommand(ins, con);
                 con.Open();
                 com.ExecuteNonQuery();
+                Response.Redirect("Login.aspx");
+                
+                
+
             }
-            catch(Exception ex)
+          
+            catch (SqlException seq)
+            {
+                if(seq.Number == 2601)
+                {
+                    uniqueUsername.Text = "This username is already used.";
+                    uniqueUsername.ForeColor = System.Drawing.Color.Red;
+
+                }
+            }
+
+
+            catch (Exception ex)
             {
 
             }
+            
+
+
             finally
             {
                 con.Close();
             }
+            
+            
         }
         static string getMd5Hash(string input)
         { // Create a new instance of the MD5CryptoServiceProvider object.

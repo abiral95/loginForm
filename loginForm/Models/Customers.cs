@@ -10,16 +10,15 @@ namespace loginForm.Models
     public class Customers
     {
         public int Id { get; set; }
-        [Required]
+       
         public string FirstName{ get; set; }
-        [Required]
-        public string LastName { get; set; }
-        [Required]
-        public string Username { get; set; }
-        [Required]
         
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        public string LastName { get; set; }
+        
+        public string Username { get; set; }
+       
+        
+       
         public string Password { get; set; }
     }
 }

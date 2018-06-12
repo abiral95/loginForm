@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="loginForm.FirstWebPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="loginForm.Login" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,8 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+                <link rel="stylesheet" type="text/css" href="~/Content/logincss.css"/>
+
 
 </head>
 
@@ -34,8 +35,7 @@
                 <asp:TextBox class="form-control" ID="TxtPassword" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
                 </td>
             </tr>
-            
-           
+                       
         </table>
     </div>
         <br />
@@ -48,10 +48,15 @@
         <p>
            
             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/View/PasswordRecovery.aspx" style="margin-left:20px;color:black;">Forgot Password?</asp:HyperLink>
+
+        </p>
+        <p>
+           
+            
         </p>
     </form>
         <div class="col-lg-4 col-md-4 "></div>
-       
         </div>
 </body>
 </html>
