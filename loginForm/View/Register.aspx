@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="loginForm.View.WebForm1" %>
+﻿[<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="loginForm.View.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -51,20 +51,20 @@
                     <asp:Label ID="uniqueUsername" runat="server"></asp:Label>
                 </td>
             </tr>
-            <tr  class="row">
+            <tr  class="row">  
                 <td class="input-group" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:17px;">Password:</td>
                 <td style="padding-left:20px;">
                     <asp:TextBox class="form-control" ID="TxtPassword" runat="server" TextMode="Password" placeholder="Password" field="password"></asp:TextBox>
-
-                    
                 </td>
+                    
+             
             </tr>
             
            
         </table>
     </div>
         <br />
-    <asp:Button type="button" class="btn btn-primary btn-md" ID="Button1" OnClick="Button1_Click" runat="server" Text="Register" style="margin-left:38px;"/>
+    <asp:Button type="button" class="btn btn-primary btn-md" ID="Button1" runat="server" Text="Register" style="margin-left:38px;"/>
     <asp:Label ID="registrationSuccess" runat="server"></asp:Label>
 
     </form>
@@ -72,15 +72,17 @@
        
         </div>
 </body>
-<script>
+
+
+    <script>
    
-    $(document).ready(function () {
-        $.validator.addMethod("regex", function(value, element, regexp)
-        {
-            var re = new RegExp(regexp);
-            return this.optional(element) || re.test(value);
-        },"Please check your name."
-    );
+        $('#<%=Button1.ClientID%>').click(function () {
+            $.validator.addMethod("regex", function(value, element, regexp)
+            {
+                var re = new RegExp(regexp);
+                return this.optional(element) || re.test(value);
+            },"Please check your name."
+        );
 
             $('#form1').validate({
             
@@ -125,9 +127,38 @@
                          
                      }, 
                  },
+                submitHandler: function(form) {
+
+                        var firstname = $("#TxtFNam").val();
+                        var lastname = $("#TxtLName").val(); 
+                        var username =$("#TextUsername").val();
+                        var password=$("#TxtPassword").val();
+        
+                        $.ajax({
+                            type: "POST",
+                            url: 'Register.aspx/Getdata',
+                            data: JSON.stringify({ cusFirstname: firstname, cusLastname: lastname , cusUsername: username , cusPassword: password }),
+                            async: true,
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (result) {
+                                console.log(result);
+                                alert(result.d);
+                            },
+                            error: function () {
+                                console.log("An error has occurred during processing your request.");
+                            }
+                        });
+
+                 
+                        return false;
+                    
+                    
+                }
+
             });
         });
-    
+        
 </script>
  
 </html>

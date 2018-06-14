@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.Services;
 
 namespace loginForm
 {
@@ -15,6 +16,7 @@ namespace loginForm
         SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\aspnet-loginForm-20180607011203.mdf;Initial Catalog=aspnet-loginForm-20180607011203;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
+         
 
         }
 
@@ -54,8 +56,7 @@ namespace loginForm
             {
                 con.Close();
             }
-
-        }
+    }
 
         static string getMd5Hash(string input)
         { // Create a new instance of the MD5CryptoServiceProvider object.

@@ -1,1 +1,11 @@
-﻿
+﻿.panel {
+    height:300px;
+    width:500px;
+    background-color:aliceblue;
+    
+    padding:0;
+    margin-top:30px;
+    margin-left:450px;
+
+}
+
