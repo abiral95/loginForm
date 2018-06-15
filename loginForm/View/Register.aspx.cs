@@ -64,6 +64,7 @@ namespace loginForm.View
 
         }
 
+
         [WebMethod]
 
         public static string GetData(object cusFirstname, object cusLastname, object cusUsername, object cusPassword)
@@ -118,7 +119,7 @@ namespace loginForm.View
             // Return the hexadecimal string.
             return sBuilder.ToString();
         }
-
+ 
 
     }
 }

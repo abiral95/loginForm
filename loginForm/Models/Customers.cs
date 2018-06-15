@@ -7,6 +7,7 @@ using System.Data.Entity;
 
 namespace loginForm.Models
 {
+    
     public class Customers
     {
         public int Id { get; set; }

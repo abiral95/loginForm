@@ -206,6 +206,7 @@
     <Content Include="Content\registercss.css" />
     <Content Include="Content\Site.css" />
     <Content Include="jquery\RegistrationValidation.js" />
+    <Content Include="View\Display.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -415,8 +416,19 @@
     <Compile Include="Migrations\201806111116420_AllDataAnnotationsRemoved.Designer.cs">
       <DependentUpon>201806111116420_AllDataAnnotationsRemoved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806140949081_CustomerContextClassCreated.cs" />
+    <Compile Include="Migrations\201806140949081_CustomerContextClassCreated.Designer.cs">
+      <DependentUpon>201806140949081_CustomerContextClassCreated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="View\Display.aspx.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Display.aspx.designer.cs">
+      <DependentUpon>Display.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -488,6 +500,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806111116420_AllDataAnnotationsRemoved.resx">
       <DependentUpon>201806111116420_AllDataAnnotationsRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806140949081_CustomerContextClassCreated.resx">
+      <DependentUpon>201806140949081_CustomerContextClassCreated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
