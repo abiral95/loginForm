@@ -66,7 +66,7 @@ namespace loginForm.View
 
 
         [WebMethod]
-
+    
         public static string GetData(object cusFirstname, object cusLastname, object cusUsername, object cusPassword)
         {
             String message = "";

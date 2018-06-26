@@ -32,6 +32,8 @@ namespace loginForm.Models
     {
 
         public DbSet<Customers> Customers { get; set; }
+        public DbSet<Students> Students { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

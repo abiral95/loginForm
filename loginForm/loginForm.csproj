@@ -201,11 +201,13 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\crudStyle.css" />
     <Content Include="Content\logincss.css" />
     <Content Include="Content\passwordRecovery.css" />
     <Content Include="Content\registercss.css" />
     <Content Include="Content\Site.css" />
     <Content Include="jquery\RegistrationValidation.js" />
+    <Content Include="View\ajaxCrud.aspx" />
     <Content Include="View\Display.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\Login.aspx" />
@@ -420,8 +422,32 @@
     <Compile Include="Migrations\201806140949081_CustomerContextClassCreated.Designer.cs">
       <DependentUpon>201806140949081_CustomerContextClassCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806180811545_StudentsClassInitialMigration.cs" />
+    <Compile Include="Migrations\201806180811545_StudentsClassInitialMigration.Designer.cs">
+      <DependentUpon>201806180811545_StudentsClassInitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806190655076_PhotoAttributeTypeChangeToString.cs" />
+    <Compile Include="Migrations\201806190655076_PhotoAttributeTypeChangeToString.Designer.cs">
+      <DependentUpon>201806190655076_PhotoAttributeTypeChangeToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806190800265_DateOfBirthTypeChangedToString.cs" />
+    <Compile Include="Migrations\201806190800265_DateOfBirthTypeChangedToString.Designer.cs">
+      <DependentUpon>201806190800265_DateOfBirthTypeChangedToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806190919446_DateOfBirthTypeChangedAgain.cs" />
+    <Compile Include="Migrations\201806190919446_DateOfBirthTypeChangedAgain.Designer.cs">
+      <DependentUpon>201806190919446_DateOfBirthTypeChangedAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Students.cs" />
+    <Compile Include="View\ajaxCrud.aspx.cs">
+      <DependentUpon>ajaxCrud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ajaxCrud.aspx.designer.cs">
+      <DependentUpon>ajaxCrud.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Display.aspx.cs">
       <DependentUpon>Display.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -503,6 +529,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806140949081_CustomerContextClassCreated.resx">
       <DependentUpon>201806140949081_CustomerContextClassCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806180811545_StudentsClassInitialMigration.resx">
+      <DependentUpon>201806180811545_StudentsClassInitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806190655076_PhotoAttributeTypeChangeToString.resx">
+      <DependentUpon>201806190655076_PhotoAttributeTypeChangeToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806190800265_DateOfBirthTypeChangedToString.resx">
+      <DependentUpon>201806190800265_DateOfBirthTypeChangedToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806190919446_DateOfBirthTypeChangedAgain.resx">
+      <DependentUpon>201806190919446_DateOfBirthTypeChangedAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

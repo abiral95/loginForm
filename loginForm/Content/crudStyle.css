@@ -1,0 +1,36 @@
+﻿body {
+    margin:0px;
+    padding:0px;
+
+
+}
+
+th,td {
+
+    
+    
+    text-align:center;
+
+}
+
+
+.inputRow {
+margin:0px;
+padding:0px;
+
+}
+.editroww {
+
+    margin-left:0px;
+    align-content:center;
+
+}
+label {
+    font-weight: normal !important;
+}
+img {
+
+height:80px;
+width:80px;
+
+}
